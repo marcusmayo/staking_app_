@@ -28,7 +28,7 @@ contract Staking_Dapp{
 
         require(_amount > 0, "amount can not be zero"); //if amount is zero or not
 
-        tether_token.trnasferfrom(msg.sender, address(this), _amount); // transfered tether to contract address
+        tether_token.transferfrom(msg.sender, address(this), _amount); // transfered tether to contract address
 
         stakingBalance[msg.sender] = stakingBalance[msg.sender] + _amount; // updated the staking balace of user
 
